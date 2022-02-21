@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dictionary</title>
+</head>
+<body>
+<div th:insert="fragments/_header :: header"></div>
+
+<table class="word">
+    <tr th:each="wls : ${word}">
+        <td>
+            <!--<th:href=" -->
+            <a th:href="@{'/definition/'+${wls.term}}"><h3 th:text="${wls.term}">Word</h3></a>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

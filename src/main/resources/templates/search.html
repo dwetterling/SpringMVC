@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method ="post"
+      th:action="@{/definition}"
+      th:object="${word}">
+        <input type="text" id="search" name="search" th:value="*{term}">
+    <button type="submit" onclick="">Search</button>
+</form>
+</body>
+</html>

@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+<div th:insert="fragments/_header :: header"></div>
 <form method ="post"
       th:action="@{/definition}"
       th:object="${word}">

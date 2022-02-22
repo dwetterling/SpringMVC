@@ -42,6 +42,9 @@ public class WordController {
 
     @PostMapping("/definition")
     public  String showSearchPage(@RequestParam(name ="search") String word){
+        if(wordListService.getWord(word) == null){
+           return "error";
+        }else
         return "redirect:/definition/" + word;
     }
 
